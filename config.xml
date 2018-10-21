@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget id="A6055334522351" version="1.1.0">
+  <name>逗帆晓雾</name>
+  <description>逗帆团队旗下的对话式人工智能</description>
+  <author email="info@dofan.ltd" href="http://ai.dofan.cn">逗帆团队</author>
+  <content src="index.html"/>
+  <preference name="pageBounce" value="false"/>
+  <preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+  <preference name="windowBackground" value="rgba(0,0,0,0.0)"/>
+  <preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"/>
+  <preference name="hScrollBarEnabled" value="true"/>
+  <preference name="vScrollBarEnabled" value="true"/>
+  <preference name="autoLaunch" value="true"/>
+  <preference name="fullScreen" value="false"/>
+  <preference name="autoUpdate" value="true"/>
+  <preference name="smartUpdate" value="true"/>
+  <preference name="debug" value="true"/>
+  <preference name="statusBarAppearance" value="true"/>
+  <permission name="readPhoneState"/>
+  <permission name="camera"/>
+  <permission name="record"/>
+  <permission name="location"/>
+  <permission name="fileSystem"/>
+  <permission name="internet"/>
+  <permission name="bootCompleted"/>
+  <permission name="hardware"/>
+  <access origin="*"/>
+  <feature name="ajpush">
+    <param name="app_key" value="f7cfd7be97b294c90720b849"/>
+    <param name="channel" value="baiduApp"/>
+  </feature>
+  <feature name="QQPlus">
+    <param name="urlScheme" value="tencent1106911625"/>
+    <param name="apiKey" value="1106911625"/>
+  </feature>
+  <feature name="wx">
+    <param name="urlScheme" value="wxd19c08eeb2da630f"/>
+    <param name="apiKey" value="wxd19c08eeb2da630f"/>
+    <param name="apiSecret" value="eb5d806dc1e64de2a61cd847b00af3e1"/>
+  </feature>
+  <feature name="weibo">
+    <param name="urlScheme" value="wb870031876"/>
+    <param name="apiKey" value="870031876"/>
+    <param name="registUrl" value="https://www.dofan.cn"/>
+  </feature>
+</widget>

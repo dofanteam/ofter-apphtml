@@ -1,0 +1,196 @@
+<header class="aui-bar aui-bar-nav"></header><!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/aui.css" / >
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+
+    <style>
+		html, body {width: 100%;min-height: 100%;background: #f0f0f0;}
+		.h10 {height: 10px;background: #f0f0f0;}
+	.h1 {height: 1px;margin-left: 15px;background: #f0f0f0;}
+	.fr {float: right;}
+	.hint {color: #666;font-size: 12px;margin-right: 5px;}
+		/* 图标logo之类的 */
+		.softwarelogo {text-align: center;margin-top: 20px;}
+		.moreinfo01 {text-align: center; font-size: 0.6em; margin: 7px;}
+		.moreinfo02 {text-align: center;font-size: 0.6em;color: #009AF7;margin-top: 20px;}
+		.moreinfo02 span {text-decoration: underline;color: #009AF7;}
+    	body{
+
+    	}
+    </style>
+</head>
+<body>
+
+<!--上面是轮播图，下面是九宫格-->
+<div class="softwarelogo">
+	<img src="../image/wight.png" alt="">
+</div>
+<ul class="aui-grid-sixteen">
+	<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('talk')">
+	<img src="../image/talk.png" alt="" class="item_ico">
+	<p>快捷聊天</p>
+		<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('shejiao')">
+		<img src="../image/shejiaozhanghao.png" alt="" class="item_ico">
+		<p>账号矩阵</p>
+		<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('help')">
+		<img src="../image/help.png" alt="" class="item_ico">
+		<p>帮助文档</p>
+		<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('user_fatie')">
+		<img src="../image/fatie.png" alt="" class="item_ico">
+		<p>发帖</p>
+</ul>
+<p>这里是一些小工具~(～￣▽￣)～</P>
+	<ul class="aui-grid-sixteen">
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('weather')">
+			<img src="../image/weather.png" alt="" class="item_ico">
+			<p>天气预报</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('gupiao')">
+			<img src="../image/gupiao.png" alt="" class="item_ico">
+			<p>股票查询</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('kuaidi')">
+			<img src="../image/kuaidi.png" alt="" class="item_ico">
+			<p>快递查询</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('caipu')">
+			<img src="../image/caipu.png" alt="" class="item_ico">
+			<p>菜谱查询</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('fanyi')">
+			<img src="../image/fanyi.png" alt="" class="item_ico">
+			<p>翻译</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('xingzuo')">
+			<img src="../image/xingzuo.png" alt="" class="item_ico">
+			<p>星座运势</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('h-t')">
+			<img src="../image/h-t.png" alt="" class="item_ico">
+			<p>史上今日</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('calculator')">
+			<img src="../image/calculator.png" alt="" class="item_ico">
+			<p>计算器</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('qr_code')">
+			<img src="../image/qr_code.png" alt="" class="item_ico">
+			<p>二维码生成</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('qqshare')">
+			<img src="../image/QQm.png" alt="" class="item_ico">
+			<p>Q卡片消息</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('liteurl')">
+			<img src="../image/liteurl.png" alt="" class="item_ico">
+			<p>短网址生成</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('qunnick')">
+			<img src="../image/qunnick.png" alt="" class="item_ico">
+			<p>特殊群昵称</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('qmkg')">
+			<img src="../image/qmkg.png" alt="" class="item_ico">
+			<p>K歌解析</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('qzone')">
+			<img src="../image/qzone1.png" alt="" class="item_ico">
+			<p>艾特蓝链</p>
+			<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('wall')">
+			<img src="../image/wall.png" alt="" class="item_ico">
+			<p>表白墙</p>
+	</ul>
+	<p>这边是几个沙雕功能(`・ω・´)</P>
+	<ul class="aui-grid-sixteen">
+		<li class="aui-col-xs-3 aui-text-center" onclick="openApp()">
+		<img src="../image/qq_tbs.png" alt="" class="item_ico">
+		<p>坦白说查看</p>
+		<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('cannotbaidu')">
+		<img src="../image/cannotbaidu.png" alt="" class="item_ico">
+		<p>不会百度？</p>
+		<li class="aui-col-xs-3 aui-text-center" onclick="openNewWin('zhonger_light')">
+		<img src="../image/sun.png" alt="" class="item_ico">
+		<p>中二神光</p>
+	</ul>
+	<p>Tips1:QQ上的逗帆晓雾很容易被腾讯屏蔽哦，不过一般私聊是没有任何问题哒~被屏蔽了请在“账号矩阵”寻找晓雾的小号~</p>
+	<p>Tips2:在群聊里面，除了点歌以外其他的拓展功能都是要艾特她的。</p>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+
+<script type="text/javascript">
+apiready = function(){
+		var UIScrollPicture = api.require('UIScrollPicture');
+		UIScrollPicture.open({
+		    rect: {
+    x: 0,   //（可选项）数字类型；模块左上角的 x 坐标（相对于所属的 Window 或 Frame）；默认：0
+    y: 0,   //（可选项）数字类型；模块左上角的 y 坐标（相对于所属的 Window 或 Frame）；默认：0
+    w: api.winWidth, //（可选项）数字类型；模块的宽度；默认：'auto'
+    h: api.winHeight / 3,  //（可选项）数字类型；模块的高度；默认：'auto'
+},
+		    data: {
+		        paths: [
+		            'http://api.dofan.cn/lunbo/1.png',
+		            'http://api.dofan.cn/lunbo/2.png',
+		            'http://api.dofan.cn/lunbo/3.png',
+		            'http://api.dofan.cn/lunbo/4.png'
+		        ],
+		    },
+		    styles: {
+		        caption: {
+		            height: 35,
+		            color: '#E0FFFF',
+		            size: 13,
+		            bgColor: '#696969',
+		            position: 'bottom'
+		        },
+		        indicator: {
+		           dot:{
+		             w:20,
+		             h:10,
+		             r:5,
+		             margin:20
+		          },
+		            align: 'center',
+		            color: '#FFFFFF',
+		            activeColor: '#3498DB'
+		        }
+		    },
+
+		    placeholderImg: 'widget://image/wight.png',
+		    contentMode: 'scaleToFill',
+		    interval: 3,
+		    fixedOn: api.frameName,
+		    loop: true,
+		    fixed: false
+		}, function(ret, err) {
+		    if (ret) {
+		      if(ret.eventType == 'click'){
+					 //window.location.href=['https://www.dofan.cn/lunbo/1.html','https://www.dofan.cn/lunbo/2.html','https://www.dofan.cn/lunbo/3.html','https://www.dofan.cn/lunbo/4.html'];
+						//var UIScrollPicture = api.require('UIScrollPicture');
+						//UIScrollPicture.hide();
+					}
+
+		    } else {
+
+		    }
+
+		});
+
+}
+function openNewWin (winname) {
+	api.openWin({
+		name: winname,
+		url: './'+ winname +'.html',
+		delay:200
+	});
+}
+function openApp (winname){
+api.openApp({
+    androidPkg: 'android.intent.action.VIEW',
+    mimeType: 'text/html',
+    uri: 'http://tbs.api.dofan.cn/'
+},function(ret,err){
+    var msg = JSON.stringify(ret);
+    api.alert({
+        title: 'openApp',
+        msg: msg,
+        buttons: ['确定']
+    });
+});
+}
+</script>
+</html>

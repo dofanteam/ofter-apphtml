@@ -1,0 +1,210 @@
+<!--//
+//                       _oo0oo_
+//                      o8888888o
+//                      88" . "88
+//                      (| -_- |)
+//                      0\  =  /0
+//                    ___/`---'\___
+//                  .' \\|     |// '.
+//                 / \\|||  :  |||// \
+//                / _||||| -:- |||||- \
+//               |   | \\\  -  /// |   |
+//               | \_|  ''\---/''  |_/ |
+//               \  .-\__  '-'  ___/-. /
+//             ___'. .'  /--.--\  `. .'___
+//          ."" '<  `.___\_<|>_/___.' >' "".
+//         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//         \  \ `_.   \_ __\ /__ _/   .-` /  /
+//     =====`-.____`.___ \_____/___.-`___.-'=====
+//                       `=---='
+//
+//
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+//               佛祖保佑         永无BUG-->
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+<meta charset="utf-8">
+	<title>我的界面</title>
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+
+    <style>
+    	html, body {width: 100%;min-height: 100%;background: #f0f0f0;}
+    	.h10 {height: 10px;background: #f0f0f0;}
+		.h1 {height: 1px;margin-left: 15px;background: #f0f0f0;}
+		.fr {float: right;}
+		.hint {color: #666;font-size: 12px;margin-right: 5px;}
+
+		.firstblock, .secondblock, .thirdblock {background-color: #fff;}
+		/* 头部登陆，不要乱动 */
+		.login {position:relative;background-image: url(../image/api_31.png);background-repeat: no-repeat; background-size: contain;}
+		.loginbg { width: 100%;}
+		.login .personal_logo {position: absolute; left:0;top: 55px; width: 70px; margin-left: 20px;}
+		.person_arrow {position: absolute;height: 20px; right: 10px; top: 90px;}
+		.login .userinfo {position: absolute; top: 60px; margin-left: 100px;}
+		.login .userinfo .title {font-size: 20px; color: #fff;}
+		.login .userinfo .subtitle {font-size: 14px; color: #fff;border: 1px solid #fff;display: inline-block;padding: 3px;border-radius: 4px;margin-top: 5px;}
+
+		/* 设置条目 */
+		.item {height: 50px;line-height: 50px;padding-left: 15px;background-color: #fff;}
+		.item_ico {float: left;width: 30px;padding: 10px 10px 10px 0;}
+		.item_arrow {float: right;width: 16px;padding: 17px 15px 15px 0;}
+
+		.presshover {background-color: #FAFAFA;}
+		/* 图标logo之类的 */
+		.softwarelogo {text-align: center;margin-top: 20px;}
+		.moreinfo01 {text-align: center; font-size: 0.6em; margin: 7px;}
+		.moreinfo02 {text-align: center;font-size: 0.6em;color: #009AF7;margin-top: 20px;}
+		.moreinfo02 span {text-decoration: underline;color: #009AF7;}
+    </style>
+</head>
+	<!--第一块-->
+	<div class="firstblock">
+		<div class="item" tapmode="presshover" onclick="shareqq()">
+			<img src="../image/qq.png" alt="" class="item_ico">
+			<span>分享到QQ</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="shareqzone()">
+			<img src="../image/qzone.png" alt="" class="item_ico">
+			<span>分享到QQ空间</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+	</div>
+
+
+	<!-- 第二块 -->
+	<div class="h10"></div>
+	<div class="secondblock">
+		<div class="item" tapmode="presshover" onclick="sharewx()">
+			<img src="../image/wechat.png" alt="" class="item_ico">
+			<span>分享到微信</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="sharepyq()">
+			<img src="../image/moments.png" alt="" class="item_ico">
+			<span>分享到朋友圈</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+	</div>
+	<!-- 第三块 -->
+	<div class="h10"></div>
+	<div class="thirdblock">
+		<div class="item" tapmode="presshover" onclick="shareweibo()">
+			<img src="../image/weibo.png" alt="" class="item_ico">
+			<span>分享到微博</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="share()">
+			<img src="../image/share.png" alt="" class="item_ico">
+			<span>系统级分享</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+	</div>
+
+
+	<div class="h10"></div><div class="h10"></div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+function openNewWin (winname) {
+	api.openWin({
+		name: winname,
+		url: './'+ winname +'.html',
+		delay:200
+	});
+}
+function share (winname){
+var sharedModule = api.require('shareAction');
+sharedModule.share({
+    text: '推荐一个有趣的人工智障逗帆晓雾，聊天查东西应有尽有，app里面还可以查看二次元资讯哦http://ai.dofan.cn/',
+    type: 'text'
+});
+}
+function shareqq (winname){
+var qq = api.require('QQPlus');
+qq.shareNews({
+	type:'QFriend',
+    url: 'http://ai-qq.dofan.cn/',
+    title: '给你推荐一个人工智障',
+    description: '萌萌哒的逗帆晓雾~',
+    imgUrl: 'https://a0.kuyingfang.cn/2018/07/0c8119ad7f61e65f5b4b0d65b6e70e3c.png'
+},function(ret,err){
+  if (ret.status){
+    alert("感谢你的安利~");
+  } else {
+    api.alert({msg: JSON.stringify(err)});
+  }
+});
+}
+function shareqzone (winname){
+var qq = api.require('QQPlus');
+qq.shareNews({
+	type:'QZone',
+    url: 'http://ai-qq.dofan.cn/',
+    title: '给你推荐一个人工智障',
+    description: '萌萌哒的逗帆晓雾~',
+    imgUrl: 'https://a0.kuyingfang.cn/2018/07/0c8119ad7f61e65f5b4b0d65b6e70e3c.png'
+},function(ret,err){
+  if (ret.status){
+    alert("感谢你的安利~");
+  } else {
+    api.alert({msg: JSON.stringify(err)});
+  }
+});
+}
+function sharepyq (winname){
+var wx = api.require('wx');
+wx.shareWebpage({
+    apiKey: '',
+    scene: 'timeline',
+    title: '给你推荐一个人工智障:逗帆晓雾',
+    description: '萌萌哒的逗帆晓雾~',
+    thumb: 'widget://icon/icon150x150.png',
+    contentUrl: 'ai-qq.dofan.cn'
+}, function(ret, err) {
+    if (ret.status) {
+        alert('感谢你的安利~');
+    } else {
+        alert(err.code);
+    }
+});
+}
+function sharewx (winname){
+var wx = api.require('wx');
+wx.shareWebpage({
+    apiKey: '',
+    scene: 'session',
+    title: '给你推荐一个人工智障',
+    description: '萌萌哒的逗帆晓雾~',
+    thumb: 'widget://icon/icon150x150.png',
+    contentUrl: 'ai-qq.dofan.cn'
+}, function(ret, err) {
+    if (ret.status) {
+        alert('感谢你的安利~');
+    } else {
+        alert(err.code);
+    }
+});
+}
+function shareweibo (winname){
+var weibo = api.require('weibo');
+weibo.shareWebPage({
+    text: '给你推荐一个人工智障:逗帆晓雾',
+    title: '逗帆晓雾',
+    description: '萌萌哒的人工智能',
+    thumb: 'widget://icon/icon150x150.png',
+    contentUrl: 'http://ai.dofan.cn/'
+}, function(ret, err) {
+    if (ret.status) {
+        alert('分享成功');
+    }
+});
+}
+</script>
+</html>

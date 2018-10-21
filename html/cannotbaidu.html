@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+	<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+
+      </header>
+      <meta charset="utf-8">
+      <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+      <title>title</title>
+      <link rel="stylesheet" type="text/css" href="../../css/api.css"/>
+      <style>
+      /*第一头部*/
+     .egret-header-box {height: 50px;}
+     .egret-img {position: absolute;}
+     .egret-img img {height: 30px;padding: 10px;}
+     .egret-header-search {background-color: #fff; position: absolute; left: 60px; right: 20px; height: 34px; margin-top: 8px;border-radius: 4px;}
+     .egret-header-search img {margin-left: 30px; height: 20px; margin-top: 7px;}
+     .egret-header-search input {line-height: 24px;font-size: 14px;padding-top: 5px;}
+     .egret-header-search input:focus {/*border:0;*/ outline:none;}
+
+      /* 第二头部 */
+     .egret-header-text {line-height: 50px;color: #fff;font-size: 16px;padding: 0 10px;}
+     .egret-header-title {position: absolute;width: 100%;text-align: center;line-height: 50px;color: #fff;font-size: 20px;}
+
+          body{
+
+          }
+
+      </style>
+  </head>
+  <body>
+    <div id="wrap" class="flex-wrap flex-vertical">
+    <header class="egret-header topbar aui-bar aui-bar-nav aui-bar-info">
+    	<a class="aui-pull-left" alt="" onclick="goback()">
+    		<span class="aui-iconfont aui-icon-left" alt="" onclick="goback()"></span>
+    		返回
+    	</a>
+    	<div class="aui-title">不会百度？</div>
+      <div id="main" class="flex-con">
+    </header>
+    <div class="content">
+
+</div>
+<script src="../script/api.js"></script>
+<script src="../script/zepto.min.js"></script>
+<script>
+    apiready = function ()
+    {
+       $api.fixStatusBar( $api.dom('header') );
+        api.setStatusBarStyle({
+            style: 'dark',
+            color: '#3498DB'
+        });
+       var header = $api.byId('aui-header');
+       $
+        var $headerH = $("header").height();
+        var url = '../lite_apps/cannotbaidu/index.html';
+        api.openFrame({
+            name: 'detail-con',
+            url: url,
+            rect: {
+                x: 0,
+                y: $headerH,
+                w: 'auto',
+                h: 'auto'
+            },
+            showProgress: 'true'
+
+        });
+    }
+    function reply(){
+        api.openWin({
+            name:'win_reply',
+            url:'win_reply.html'
+        })
+    }
+    function goback () {
+        api.closeWin();
+    }
+</script>
+  </body>
+  </html>

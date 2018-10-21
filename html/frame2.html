@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="stylesheet" type="text/css" href="../css/aui.css" />
+<meta charset="utf-8">
+	<title>我的界面</title>
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+	<link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+
+    <style>
+    	html, body {width: 100%;min-height: 100%;background: #f0f0f0;}
+    	.h10 {height: 10px;background: #f0f0f0;}
+		.h1 {height: 1px;margin-left: 15px;background: #f0f0f0;}
+		.fr {float: right;}
+		.hint {color: #666;font-size: 12px;margin-right: 5px;}
+
+		.firstblock, .secondblock, .thirdblock {background-color: #fff;}
+		/* 头部登陆，不要乱动 */
+		.login {position:relative;background-image: url(../image/api_31.png);background-repeat: no-repeat; background-size: contain;}
+		.loginbg { width: 100%;}
+		.login .personal_logo {position: absolute; left:0;top: 55px; width: 70px; margin-left: 20px;}
+		.person_arrow {position: absolute;height: 20px; right: 10px; top: 90px;}
+		.login .userinfo {position: absolute; top: 60px; margin-left: 100px;}
+		.login .userinfo .title {font-size: 20px; color: #fff;}
+		.login .userinfo .subtitle {font-size: 14px; color: #fff;border: 1px solid #fff;display: inline-block;padding: 3px;border-radius: 4px;margin-top: 5px;}
+
+		/* 设置条目 */
+		.item {height: 50px;line-height: 50px;padding-left: 15px;background-color: #fff;}
+		.item_ico {float: left;width: 30px;padding: 10px 10px 10px 0;}
+		.item_arrow {float: right;width: 16px;padding: 17px 15px 15px 0;}
+
+		.presshover {background-color: #FAFAFA;}
+		/* 图标logo之类的 */
+		.softwarelogo {text-align: center;margin-top: 20px;}
+		.moreinfo01 {text-align: center; font-size: 0.6em; margin: 7px;}
+		.moreinfo02 {text-align: center;font-size: 0.6em;color: #009AF7;margin-top: 20px;}
+		.moreinfo02 span {text-decoration: underline;color: #009AF7;}
+    </style>
+</head>
+<!--       <body>
+	<div class="login" onclick="" tapmode>
+		<img src="../image/api_31.png" alt="" class="loginbg">
+		<img src="../image/api_32.png" alt="" class="personal_logo">
+		<div class="userinfo">
+			<div class="title">逗帆晓雾</div>
+			<div class="subtitle">登录面板建设中</div>
+		</div>
+		<img src="../image/personal_icon_arrow.png" alt="" class="person_arrow">
+	</div>		-->
+		<!--//上面那个不用管它-->
+	<!-- 第一块 -->
+
+	<div class="firstblock">
+		<div class="item" tapmode="presshover" onclick="openNewWin('user')">
+			<img src="../image/account.png" alt="" class="item_ico">
+			<span>个人中心</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+	</div><div class="h1"></div>
+	<div class="item" tapmode="presshover" onclick="openNewWin('user_set')">
+		<img src="../image/set.png" alt="" class="item_ico">
+		<span>用户设置</span>
+		<img src="../image/arrow.png" alt="" class="item_arrow">
+	</div>
+	</div>
+	<!-- 第二块 -->
+	<div class="h10"></div>
+	<div class="secondblock">
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_tiezi')">
+			<img src="../image/form.png" alt="" class="item_ico">
+			<span>我的发帖</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_xiaoxi')">
+			<img src="../image/email.png" alt="" class="item_ico">
+			<span>消息</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_dbi')">
+			<img src="../image/integral.png" alt="" class="item_ico">
+			<span>D币</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_diulei')">
+			<img src="../image/toys.png" alt="" class="item_ico">
+			<span>丢雷世界</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+	</div>
+
+	<!-- 第三块 -->
+	<div class="h10"></div>
+	<div class="thirdblock">
+		<div class="item" tapmode="presshover" onclick="openNewWin('about')">
+			<img src="../image/smile.png" alt="" class="item_ico">
+			<span>关于</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('xiaowuqqun')">
+			<img src="../image/atm-away.png" alt="" class="item_ico">
+			<span>Q群反馈</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('share')">
+			<img src="../image/share.png" alt="" class="item_ico">
+			<span>分享给好友</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openApp()">
+			<img src="../image/good.png" alt="" class="item_ico">
+			<span>赞助我们</span><!--此频道请在提交360手机助手等不许个人提交企业应用的市场审核时删除-->
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+	</div>
+
+
+	<div class="h10"></div><div class="h10"></div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+function openNewWin (winname) {
+	api.openWin({
+		name: winname,
+		url: './'+ winname +'.html',
+		delay:200
+	});
+}
+function xiazaiguanli (winname){
+var downloadManager = api.require('downloadManager');
+downloadManager.openManagerView({
+    title: '下载管理'
+}, function(ret, err) {
+    if (ret) {
+        //alert(JSON.stringify(ret));
+    } else {
+        //alert(JSON.stringify(err));
+    }
+});
+}
+function openApp (winname){
+api.openApp({
+    androidPkg: 'android.intent.action.VIEW',
+    mimeType: 'text/html',
+    uri: 'http://api.dofan.cn/reward/'
+},function(ret,err){
+    var msg = JSON.stringify(ret);
+    api.alert({
+        title: 'openApp',
+        msg: msg,
+        buttons: ['确定']
+    });
+});
+}
+</script>
+</html>
