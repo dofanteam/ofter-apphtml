@@ -53,34 +53,81 @@
 	<!-- 第一块 -->
 
 	<div class="firstblock">
-    <p>逗帆晓雾官方群</p>
-		<div class="item" tapmode="presshover" onclick="openNewWin('xiaowu1')">
-			<img src="../image/xiaowu.png" alt="" class="item_ico">
-			<span>QQ官方群1</span>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_set')">
+			<img src="../image/set.png" alt="" class="item_ico">
+			<span>修改资料</span>
 			<img src="../image/arrow.png" alt="" class="item_arrow">
 		</div><div class="h1"></div>
-	<div class="item" tapmode="presshover" onclick="openNewWin('xiaowu2')">
-		<img src="../image/xiaowu.png" alt="" class="item_ico">
-		<span>QQ官方群2</span>
+	<div class="item" tapmode="presshover" onclick="openNewWin('user_follower')">
+		<img src="../image/follow.png" alt="" class="item_ico">
+		<span>关注的人</span>
+		<img src="../image/arrow.png" alt="" class="item_arrow">
+	</div><div class="h1"></div>
+	<div class="item" tapmode="presshover" onclick="openNewWin('user_fans')">
+		<img src="../image/fans.png" alt="" class="item_ico">
+		<span>我的粉丝</span>
 		<img src="../image/arrow.png" alt="" class="item_arrow">
 	</div><div class="h1"></div>
 	</div>
 	<!-- 第二块 -->
+	<div class="h10"></div>
 	<div class="secondblock">
-    <p>逗帆主站官方群</p>
-		<div class="item" tapmode="presshover" onclick="openNewWin('dofan1')">
-			<img src="../image/dofan.jpg" alt="" class="item_ico">
-			<span>QQ官方群1</span>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_tiezi')">
+			<img src="../image/form.png" alt="" class="item_ico">
+			<span>我的文章</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_xiaoxi')">
+			<img src="../image/email.png" alt="" class="item_ico">
+			<span>消息</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_message')">
+			<img src="../image/message.png" alt="" class="item_ico">
+			<span>私信</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('user_dbi')">
+			<img src="../image/integral.png" alt="" class="item_ico">
+			<span>硬币</span>
 			<img src="../image/arrow.png" alt="" class="item_arrow">
 		</div><div class="h1"></div>
 	</div>
+
+	<!-- 第三块 -->
+	<div class="h10"></div>
+	<div class="thirdblock">
+		<div class="item" tapmode="presshover" onclick="openNewWin('about')">
+			<img src="../image/smile.png" alt="" class="item_ico">
+			<span>关于</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('fixbug')">
+			<img src="../image/set.png" alt="" class="item_ico">
+			<span>环境修复</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openNewWin('share')">
+			<img src="../image/share.png" alt="" class="item_ico">
+			<span>分享给好友</span>
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+		<div class="item" tapmode="presshover" onclick="openApp()">
+			<img src="../image/good.png" alt="" class="item_ico">
+			<span>赞助我们</span><!--此频道请在提交360手机助手等不许个人提交企业应用的市场审核时删除-->
+			<img src="../image/arrow.png" alt="" class="item_arrow">
+		</div><div class="h1"></div>
+	</div>
+
+
+	<div class="h10"></div><div class="h10"></div>
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
 function openNewWin (winname) {
 	api.openWin({
 		name: winname,
-		url: './html/'+ winname +'.html',
+		url: './'+ winname +'.html',
 		delay:200
 	});
 }

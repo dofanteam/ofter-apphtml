@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+<body>
+  <header class="aui-bar aui-bar-nav" id="aui-header">
+    <a class="aui-btn aui-pull-left" tapmode onclick="closeWin()">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+      <div class="aui-title">环境修复</div>
+    </header>
+  <div>
+    <h1>WebVie修复</h1>
+    <p>逗帆晓雾APP的运行的实现离不开由Google提供的Webview，如果在应用使用中发现无法自动登录、无法跳转、无法发表评论等问题，请下载
+      <a href="https://a0.kuyingfang.cn/uploads/2018/07/ASWebView_V67.0.3396.81.apk">最新版Webview</a>
+    </p>
+  </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+      api.parseTapmode();
+      var header = $api.byId('aui-header');
+      api.setStatusBarStyle({
+          style: 'dark',
+          color: '#3498DB'
+      });
+      $api.fixStatusBar(header);
+      var headerPos = $api.offset(header);
+      var body_h = $api.offset($api.dom('body')).h;
+    }
+    function closeWin(){
+        api.closeWin();
+    }
+    function showPopup(){
+        api.execScript({
+            frameName: 'popup_frm',
+            script: 'showPopup("top-right");'
+        });
+    }
+</script>
+</html>
